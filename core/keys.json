@@ -1,0 +1,189 @@
+{
+    "VECTORS": [
+        {
+            "ID": "y",
+            "DESCRIPTION": "Holds values from available sensors to be read by estimators.",
+            "KEYS": [
+                "IMU_UPDATES",
+                "GPS_UPDATES",
+                "IMU_1_AX_RAW",
+                "IMU_1_AY_RAW",
+                "IMU_1_AZ_RAW",
+                "IMU_1_GYRO_P_RAW",
+                "IMU_1_GYRO_Q_RAW",
+                "IMU_1_GYRO_R_RAW",
+                "IMU_1_MAG_X_RAW",
+                "IMU_1_MAG_Y_RAW",
+                "IMU_1_MAG_Z_RAW",
+                "IMU_1_AX_CALIB",
+                "IMU_1_AY_CALIB",
+                "IMU_1_AZ_CALIB",
+                "IMU_1_GYRO_P_CALIB",
+                "IMU_1_GYRO_Q_CALIB",
+                "IMU_1_GYRO_R_CALIB",
+                "IMU_1_MAG_X_CALIB",
+                "IMU_1_MAG_Y_CALIB",
+                "IMU_1_MAG_Z_CALIB",
+                "IMU_2_AX_RAW",
+                "IMU_2_AY_RAW",
+                "IMU_2_AZ_RAW",
+                "IMU_2_GYRO_P_RAW",
+                "IMU_2_GYRO_Q_RAW",
+                "IMU_2_GYRO_R_RAW",
+                "IMU_2_MAG_X_RAW",
+                "IMU_2_MAG_Y_RAW",
+                "IMU_2_MAG_Z_RAW",
+                "IMU_2_AX_CALIB",
+                "IMU_2_AY_CALIB",
+                "IMU_2_AZ_CALIB",
+                "IMU_2_GYRO_P_CALIB",
+                "IMU_2_GYRO_Q_CALIB",
+                "IMU_2_GYRO_R_CALIB",
+                "IMU_2_MAG_X_CALIB",
+                "IMU_2_MAG_Y_CALIB",
+                "IMU_2_MAG_Z_CALIB",
+                "BARO_PRES",
+                "GPS_POSN_LAT",
+                "GPS_POSN_LON",
+                "GPS_POSN_ALT",
+                "GPS_VEL_N",
+                "GPS_VEL_E",
+                "GPS_VEL_D",
+                "GPS_STATUS",
+                "ADC_A0",
+                "ADC_A1",
+                "ADC_A2",
+                "ADC_A3",
+                "ADC_A4",
+                "ADC_A5"
+            ]
+        },
+        {
+            "ID": "xh_0",
+            "DESCRIPTION": "Holds the output from the built-in estimator.",
+            "KEYS": [
+                "UPDATES",
+                "X",
+                "Y",
+                "Z",
+                "VT",
+                "ALPHA",
+                "BETA",
+                "PHI",
+                "THETA",
+                "PSI",
+                "P",
+                "Q",
+                "R"
+            ]
+        },
+        {
+            "ID": "xh_1",
+            "DESCRIPTION": "Holds the output from the user-defined estimator.",
+            "KEYS": [
+                "UPDATES",
+                "X",
+                "Y",
+                "Z",
+                "VT",
+                "ALPHA",
+                "BETA",
+                "PHI",
+                "THETA",
+                "PSI",
+                "P",
+                "Q",
+                "R"
+            ]
+        },
+        {
+            "ID": "controller_0",
+            "DESCRIPTION": "Holds the output from the built-in controller. If CONTROLLER_VECTOR_TO_USE=0, these values will be used when the aircraft is in AUTO mode.",
+            "KEYS": [
+                "CHANNEL_0",
+                "CHANNEL_1",
+                "CHANNEL_2",
+                "CHANNEL_3",
+                "CHANNEL_4",
+                "CHANNEL_5",
+                "CHANNEL_6",
+                "CHANNEL_7",
+                "CHANNEL_8",
+                "CHANNEL_9",
+                "CHANNEL_10",
+                "CHANNEL_11",
+                "CHANNEL_12",
+                "CHANNEL_13"
+            ]
+        },
+        {
+            "ID": "controller_1",
+            "DESCRIPTION": "Holds the output from the user-defined controller. If CONTROLLER_VECTOR_TO_USE=1, these values will be used when the aircraft is in AUTO mode.",
+            "KEYS": [
+                "CHANNEL_0",
+                "CHANNEL_1",
+                "CHANNEL_2",
+                "CHANNEL_3",
+                "CHANNEL_4",
+                "CHANNEL_5",
+                "CHANNEL_6",
+                "CHANNEL_7",
+                "CHANNEL_8",
+                "CHANNEL_9",
+                "CHANNEL_10",
+                "CHANNEL_11",
+                "CHANNEL_12",
+                "CHANNEL_13"
+            ]
+        },
+        {
+            "ID": "rcin",
+            "DESCRIPTION": "Holds the RCInput values.",
+            "KEYS": [
+                "CHANNEL_0",
+                "CHANNEL_1",
+                "CHANNEL_2",
+                "CHANNEL_3",
+                "CHANNEL_4",
+                "CHANNEL_5",
+                "CHANNEL_6",
+                "CHANNEL_7",
+                "CHANNEL_8",
+                "CHANNEL_9",
+                "CHANNEL_10",
+                "CHANNEL_11",
+                "CHANNEL_12",
+                "CHANNEL_13"
+            ]
+        },
+        {
+            "ID": "servo",
+            "DESCRIPTION": "Holds the latest servo-rail output PWM.",
+            "KEYS": [
+                "MODE_FLAG",
+                "CHANNEL_0",
+                "CHANNEL_1",
+                "CHANNEL_2",
+                "CHANNEL_3",
+                "CHANNEL_4",
+                "CHANNEL_5",
+                "CHANNEL_6",
+                "CHANNEL_7",
+                "CHANNEL_8",
+                "CHANNEL_9",
+                "CHANNEL_10",
+                "CHANNEL_11",
+                "CHANNEL_12",
+                "CHANNEL_13"
+            ]
+        },
+        {
+            "ID": "cmd",
+            "DESCRIPTION": "Holds values used for waypoint tracking.",
+            "KEYS": [
+                "PSI_C",
+                "H_C"
+            ]
+        }
+    ]
+}

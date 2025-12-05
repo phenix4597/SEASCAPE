@@ -1,0 +1,15 @@
+Description=Simple_Educational_Autopilot_System_with_C++_Architecture_and_Python_Exterior
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/SEASCAPE
+ExecStart=/usr/bin/nice -n -10 /usr/bin/python3 /home/pi/SEASCAPE/launch.py
+Restart=on-failure
+RestartSec=1
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

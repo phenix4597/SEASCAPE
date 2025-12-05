@@ -1,0 +1,90 @@
+{
+  "THREADS": {
+    "LOGGER": {
+      "DESCRIPTION": "Creates a CSV file and appends data from the selected vectors at a specified rate.",
+      "ENABLED": true,
+      "RATE": 50,
+      "LOG_SENSOR_DATA": true,
+      "LOG_ESTIMATOR_0": true,
+      "LOG_ESTIMATOR_1": false,
+      "LOG_CONTROLLER_0": false,
+      "LOG_CONTROLLER_1": true,
+      "LOG_RCIN_SERVO": true
+    },
+    "ESTIMATOR_0": {
+      "DESCRIPTION": "Built-in estimator implemented in C++. Updates xh_0 vector.",
+      "ENABLED": true,
+      "RATE": 100
+    },
+    "ESTIMATOR_1": {
+      "DESCRIPTION": "User-defined estimator implemented in Python. Updates xh_1 vector.",
+      "ENABLED": true,
+      "RATE": 100
+    },
+    "CONTROLLER_0": {
+      "DESCRIPTION": "Built-in controller implemented in C++. Updates controller_0 vector.",
+      "ENABLED": true,
+      "RATE": 50,
+      "XH_VECTOR_TO_USE": 0
+    },
+    "CONTROLLER_1": {
+      "DESCRIPTION": "User-defined controller implemented in Python. Updates controller_1 vector.",
+      "ENABLED": true,
+      "RATE": 50,
+      "XH_VECTOR_TO_USE": 1
+    },
+    "IMU_ADC": {
+      "DESCRIPTION": "Handles sensor reads from IMUs and ADC. Updates y vector.",
+      "ENABLED": true,
+      "RATE": 100,
+      "USE_LSM9DS1": true,
+      "USE_MPU9250": true,
+      "PRIMARY_IMU": "MPU9250"
+    },
+    "GPS_BAROMETER": {
+      "DESCRIPTION": "Handles sensor reads from the connected GPS and onboard barometer. Updates y vector.",
+      "ENABLED": true,
+      "RATE": 10,
+      "USE_GPS": true,
+      "USE_MS5611": true
+    },
+    "RCIN_SERVO": {
+      "DESCRIPTION": "Handles reads from RC transmitter and sets servo-rail PWM values. Updates rcin and servo vectors.",
+      "ENABLED": true,
+      "RATE": 50,
+      "PWM_FREQUENCY": 50,
+      "CONTROLLER_VECTOR_TO_USE": 0,
+      "THROTTLE_CHANNEL": 1,
+      "AILERON_CHANNEL": 2,
+      "ELEVATOR_CHANNEL": 3,
+      "RUDDER_CHANNEL": 4,
+      "FLAPS_CHANNEL": 6,
+      "FLIGHT_MODES": {
+        "MODE_CHANNEL": 5,
+        "NOTE": "Ranges include the lower value, but exclude the upper value. Default mode is manual.",
+        "MANUAL_RANGE": {
+          "LOW": 750,
+          "HIGH": 1250
+        },
+        "SEMI-AUTO_RANGE": {
+          "LOW": 1250,
+          "HIGH": 1750
+        },
+        "AUTO_RANGE": {
+          "LOW": 1750,
+          "HIGH": 2250
+        },
+        "SEMI-AUTO_DEADZONE": 50
+      },
+      "MIN_THROTTLE": 1000,
+      "MAX_THROTTLE": 1750,
+      "MIN_SERVO": 1250,
+      "MAX_SERVO": 1750
+    },
+    "TELEMETRY": {
+      "DESCRIPTION": "Sends basic Mavlink messages via radio connected to UART port.",
+      "ENABLED": true,
+      "RATE": 1
+    }
+  }
+}
