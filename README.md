@@ -266,3 +266,6 @@ For questions, bug reports, or suggestions for improvement, please reach out via
 - **MS Teams**: Direct message
 
 Contributions and feedback are welcome!
+
+## Acknowledgement
+This repository is a continuation of the original SEASCAPE project (https://github.com/nate-bake/SEASCAPE). Huge thanks to Nathan Baker for the foundational work. All ongoing development, updates, and maintenance are currently managed by Ujjval Patel. Please refer to the LICENSE file for distribution and modification rights.
